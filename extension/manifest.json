@@ -1,0 +1,21 @@
+{
+  "description": "Navigate back or forward by history with two fingers left or right on touchpad",
+  "manifest_version": 2,
+  "name": "touchpad-navigation",
+  "version": "1.0",
+
+  "permissions": [
+    "webNavigation",
+    "activeTab"
+  ],
+  
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["built/content-script.js"]
+  }],
+
+  "background": {
+    "scripts": ["built/background-script.js"]
+  }
+
+}
