@@ -1,4 +1,3 @@
-import * as $ from "jquery";
 (() => {
 
 let listenerAdded: boolean = false;
@@ -18,16 +17,16 @@ function addWheelListener() {
 
     navigated = false;
 
-    $(window).on("wheel", (e: any) => {
+    window.addEventListener("wheel", (e: any) => {
         log(`mouse wheel navigated = ${navigated}`);
 
         if (! navigated) {
-            if (e.originalEvent.deltaX && e.originalEvent.deltaX > 0) {
+            if (e.deltaX && e.deltaX > 0) {
                 log("move back");
                 history.back();
                 navigated = true;
             }
-            if (e.originalEvent.deltaX && e.originalEvent.deltaX < 0) {
+            if (e.deltaX && e.deltaX < 0) {
                 log("move forward");
                 history.forward();
                 navigated = true;

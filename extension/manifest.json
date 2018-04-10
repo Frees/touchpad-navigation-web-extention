@@ -2,9 +2,12 @@
   "description": "Navigate back or forward by history with two fingers left or right on touchpad",
   "manifest_version": 2,
   "name": "touchpad-navigation",
-  "version": "1.0",
+  "version": "1.0.1",
+  "author": "Koltcov Vikotr",
+  "homepage_url": "https://github.com/Frees/touchpad-navigation-web-extention",
 
-  "permissions": [
+  "permissions": [      
+    "tabs",
     "webNavigation",
     "activeTab"
   ],
@@ -16,6 +19,12 @@
 
   "background": {
     "scripts": ["built/background-script.js"]
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "vityarikk@gmail.com"
+    }
   }
 
 }
